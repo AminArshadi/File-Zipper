@@ -1,4 +1,4 @@
-from LZ77.LZ77 import compress_lz77, decompress_lz77
+from .LZ77.LZ77 import compress_lz77, decompress_lz77
 
 import subprocess
 import json
@@ -14,7 +14,7 @@ def zip(read_from, write_to):
         file.write(list_string)
 
     java_class_path = 'HuffmanEncode'
-    classpath = './Huffman'
+    classpath = './utils/Huffman'
     arg1 = 'tmp.txt'
     arg2 = write_to
     subprocess.run(['java', '-cp', classpath, java_class_path, arg1, arg2])
@@ -25,7 +25,7 @@ def zip(read_from, write_to):
     
 def unzip(read_from, write_to):
     java_class_path = 'HuffmanDecode'
-    classpath = './Huffman'
+    classpath = './utils/Huffman'
     arg1 = read_from
     arg2 = 'tmp.txt'
     subprocess.run(['java', '-cp', classpath, java_class_path, arg1, arg2])
@@ -42,5 +42,5 @@ def unzip(read_from, write_to):
         
     return write_to
         
-tmp = zip('genes.txt', 'zipped_genes.txt')
-unzip(tmp, 'recovered_genes.txt')
+# tmp = zip('genes.txt', 'zipped_genes.txt')
+# unzip(tmp, 'recovered_genes.txt')
