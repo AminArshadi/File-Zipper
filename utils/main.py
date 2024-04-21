@@ -27,7 +27,7 @@ def zip(read_from, write_to):
         print("Error:", process.stderr)
         raise Exception("Java subprocess failed with return code {}".format(process.returncode))
     
-    # os.remove(arg1)
+    os.remove(arg1)
     
     return write_to
     
@@ -52,6 +52,6 @@ def unzip(read_from, write_to):
     with open(write_to, 'w') as file:
         file.write(recovered_data)
         
-    # os.remove(arg2)
+    os.remove(arg2)
         
     return write_to
