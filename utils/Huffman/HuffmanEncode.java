@@ -13,6 +13,6 @@ public class HuffmanEncode {
 
 		Huffman huffObj = new Huffman();
 
-		huffObj.encode(inputFileName, outputFileName);		
+		huffObj.encode(inputFileName, outputFileName);
 	}
 }

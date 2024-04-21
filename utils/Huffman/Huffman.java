@@ -196,7 +196,7 @@ public class Huffman {
 		encodeData(copyinput, codes, codedOutput);
 	}
 	
-	public void decode (String inputFileName, String outputFileName) throws IOException, ClassNotFoundException {
+	public void decode(String inputFileName, String outputFileName) throws IOException, ClassNotFoundException {
 		System.out.println("\nDecoding "+inputFileName+ " " + outputFileName);
 		FileInputStream in = new FileInputStream(inputFileName);
  		ObjectInputStream codedInput = new ObjectInputStream(in);
